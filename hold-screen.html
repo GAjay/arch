@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/css_animate.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">  
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!-- splash screen -->
+    <div class="splash-panel">
+      <div class="splash-inner zoomIn animated wow">
+      <figure><img src="img/logo2.png" alt="logo" title="logo"></figure>
+      <span>interior design services company</span>
+      <h3>infrastructure design and management</h3>
+      </div>
+      <a href="JavaScript:void(0);">
+        <img class="normal" src="img/hold.png" alt="img">
+        <img class="hover" src="img/hold1.png" alt="img">
+      </a>
+        
+    </div>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/classie.js"></script>
+    <script>
+    var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+      showRight = document.getElementById( 'showRight' ),
+      showRightPush = document.getElementById( 'showRightPush' ),
+      body = document.body;
+    showRight.onclick = function() {
+      classie.toggle( this, 'active' );
+      classie.toggle( menuRight, 'cbp-spmenu-open' );
+      disableOther( 'showRight' );
+    };
+  </script> 
+  <script>
+      $(document).ready(function(){
+      $("#showRight").click(function(){
+          
+          $(".overlay_modal").addClass("c-mask-active");            
+      });
+      
+        $("#popup_close").click(function(){
+      $(".cbp-spmenu").removeClass("cbp-spmenu-open");
+      $(".overlay_modal").removeClass("c-mask-active");
+      
+      });
+       $(".overlay_modal").click(function(){
+            $(".cbp-spmenu").removeClass("cbp-spmenu-open");
+      $(".overlay_modal").removeClass("c-mask-active");
+
+      });
+      });
+  </script> 
+  <script src="js/jquery.isotope.min.js"></script>
+  <script>
+         $(window).load(function(){
+             var $container = $('.portfolioContainer');
+             $container.isotope({
+                 filter: '*',
+                 animationOptions: {
+                     duration: 750,
+                     easing: 'linear',
+                     queue: false
+                 }
+             });
+          
+             $('.portfolioFilter a').click(function(){
+                 $('.portfolioFilter .current').removeClass('current');
+                 $(this).addClass('current');
+          
+                 var selector = $(this).attr('data-filter');
+                 $container.isotope({
+                     filter: selector,
+                     animationOptions: {
+                         duration: 750,
+                         easing: 'linear',
+                         queue: false
+                     }
+                  });
+                  return false;
+             }); 
+         });
+      </script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script>
+        $('.owl-carousel').owlCarousel({
+          loop:true,
+          margin:30,
+          nav:false,
+          dots:false,
+          responsive:{
+              0:{
+                  items:1
+              },
+              480:{
+                  items:2
+              },
+              769:{
+                  items:3
+              }
+          }
+      })
+      </script>
+      <script> function resizeequalheight(){ equalHeight($(".item")); } function equalHeight(group) { tallest = 0; group.height(''); group.each(function() { thisHeight = $(this).height(); if(thisHeight > tallest) { tallest = thisHeight; } }); group.height(tallest); } $(function(){ $(window).resize(function() { setTimeout('resizeequalheight()',250) }); setTimeout('resizeequalheight()',250) }); </script>
+  </body>
+</html>
