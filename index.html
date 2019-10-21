@@ -34,7 +34,7 @@
         <figure>
             <img src="img/logo.png" alt="logo">
         </figure>
-        <a href="#">Products</a> <a href="#">About us</a> <a href="#">Contact us</a> 
+        <a id="project_close" href="#project">Projects</a> <a id="about_close" href="#about">About us</a> <a id="contact_close" href="#contact">Contact us</a> 
       </nav>
       <div class="overlay_modal"></div>
       <ul class="fixed-social">
@@ -44,12 +44,12 @@
       </ul>
     </header>
     <div class="banner-section">
-      <div class="container">
+      <div class="container section-width-margin">
         <!-- <div class="banner-contect">
           <h1>Innovation<br>Design</h1>
         </div> -->
         <div class="banner-carousel">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <div id="carouselExampleIndicators" class="carousel slide"  data-ride="carousel" data-interval="3000">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -73,8 +73,8 @@
     <!-- end section -->
 
     <!-- about section -->
-    <div class="about-sction">
-      <div class="container">
+    <div class="about-sction" id="about">
+      <div class="container section-width-margin">
         <div class="about-heading">
           <h2>ABOUT</h2>
         </div>
@@ -92,7 +92,7 @@
 
     <!-- about section 1-->
     <div class="about-sction one">
-      <div class="container">
+      <div class="container section-width-margin">
         <div class="about-heading">
           <h2>1.</h2>
         </div>
@@ -110,7 +110,7 @@
 
     <!-- about section 1-->
     <div class="about-sction two">
-      <div class="container">
+      <div class="container section-width-margin">
         <div class="about-heading">
           <h2>2.</h2>
           <strong>VISION</strong>
@@ -119,7 +119,7 @@
           <p>To create interiors that reflect client’s personality and lifestyle, by capturing their design dreams and making them a reality. Also, listen to clients in a professional manner and carrying out the design process until the desired product is achieved.</p>
         </div>
         <div class="about-img fadeInRight animated wow">
-          <figure><img src="img/about2.jpg" alt="img"></figure>
+          <figure><img width="850px" src="img/about2.jpg" alt="img"></figure>
         </div>
         <div class="clearfix"></div>
       </div>
@@ -128,7 +128,7 @@
 
     <!-- about section 3-->
     <div class="about-sction three">
-      <div class="container">
+      <div class="container section-width-margin">
         <div class="about-heading">
           <h2>3.</h2>
           <strong>INTERIOR PLANNING</strong>
@@ -146,8 +146,8 @@
 
     <!-- Main service blog -->
     <div class="main-service">
-      <div class="container">
-        <div class="main-service-inner lightSpeedIn animated wow">
+      <div class="container section-width-margin">
+        <div class="main-service-inner bounceIn animated wow">
           <h2>SERVICES</h2>
           <strong>We use natural and eco-friendly materials: stone, plaster, solid wood, water based paints. We care about our clients and their health, and we are concerned about the environment. </strong>
         </div>
@@ -157,7 +157,7 @@
 
     <!-- RESIDENTIAL INTERIOR DESIGNING section 1-->
     <div class="about-sction two">
-      <div class="container">
+      <div class="container section-width-margin">
         <div class="about-heading">
           <h2>1. </h2>
           <strong>RESIDENTIAL INTERIOR DESIGNING </strong>
@@ -166,7 +166,7 @@
           <p>We provide interior designing solutions for homes- all works from estimation to final inspection. Converting the houses to homes, we make the owners feel pride of their dwellings and, of course this makes others feel jealous. </p>
         </div>
         <div class="about-img fadeInRight animated wow">
-          <figure><img src="img/interior-design1.jpg" alt="img"></figure>
+          <figure><img width="850px;" src="img/interior-design1.jpg" alt="img"></figure>
         </div>
         <div class="clearfix"></div>
       </div>
@@ -175,7 +175,7 @@
 
     <!-- about section 3-->
     <div class="about-sction three">
-      <div class="container">
+      <div class="container section-width-margin">
         <div class="about-heading">
           <h2>2.</h2>
           <strong>COMMERCIAL INTERIOR DESIGN</strong>
@@ -193,7 +193,7 @@
 
     <!-- RESIDENTIAL INTERIOR DESIGNING section 1-->
     <div class="about-sction two">
-      <div class="container">
+      <div class="container section-width-margin">
         <div class="about-heading">
           <h2>3. </h2>
           <strong>Turnkey project </strong>
@@ -210,13 +210,13 @@
     <!-- end section -->
 
     <!-- gallery start -->
-    <div class="gallery-section">
-      <div class="container">
-        <div class="about-heading">
-          <h2>GALLERY </h2>
+    <div class="gallery-section" id="project">
+      <div class="container section-width-margin">
+        <div class="about-heading" style="padding-left:10px;">
+          <h2>PROJECT</h2>
           <strong>PART’S OF INTERIOR </strong>
         </div>
-         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+         <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
            <li class="nav-item">
              <a class="nav-link active" id="showall-tab" data-toggle="pill" href="#showall" role="tab" aria-controls="showall" aria-selected="true">All</a>
            </li>
@@ -229,7 +229,7 @@
            <li class="nav-item">
              <a class="nav-link" id="Forest-tab" data-toggle="pill" href="#Forest" role="tab" aria-controls="Forest" aria-selected="false">FURNISHING</a>
            </li>
-         </ul>
+         </ul> -->
          <div class="tab-content" id="pills-tabContent">
            <div class="tab-pane fade show active" id="showall" role="tabpanel" aria-labelledby="showall-tab">
              <div class="Portfolio">
@@ -248,7 +248,7 @@
                <a href="#!"><img class="card-img" src="img/gallery5.jpg" alt=""></a>
             </div>
            </div>
-           <div class="tab-pane fade" id="Cars" role="tabpanel" aria-labelledby="Cars-tab">
+           <!-- <div class="tab-pane fade" id="Cars" role="tabpanel" aria-labelledby="Cars-tab">
             <div class="Portfolio">
                <a href="#!"><img class="card-img" src="img/gallery1.jpg" alt=""></a>
             </div>
@@ -301,7 +301,7 @@
              <div class="Portfolio">
                <a href="#!"><img class="card-img" src="img/gallery4.jpg" alt=""></a>
             </div>
-           </div>
+           </div> -->
          </div>
          </div>
     </div>
@@ -311,7 +311,7 @@
 
     <!-- service overview -->
     <div class="service-overview">
-      <div class="container">
+      <div class="container section-width-margin">
          <h2>SERVICES OVERVIEW</h2>      
          <div class="owl-carousel owl-theme">
             <div class="item">
@@ -351,8 +351,9 @@
 
     <!-- team -->
     <div class="team-section">
-      <div class="container">
+      <div class="container section-width-margin">
         <div class="left-content">
+          <p>We strongly believe that one happy customer leads to another. We have strived to build lasting relationship by keenly watching quality, cost – effectiveness and timeliness in its delivery.</p>
           <h3>suren meliksetyan</h3>
           <span>head of graphic design and publicity department</span>
         </div>
@@ -364,25 +365,30 @@
     <!-- end section -->
 
     <!-- get in tuch -->
-    <div class="get-tuch">
-      <div class="container">
+    <div class="get-tuch page-section" id="contact">
+      <div class="container-fluid">
          <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-5">
                <h4>Contacts</h4>
+               <br>
+               <br>
                <ADDRESS>
                  D-1, Xrbia Hinjewadi Township,  Hinjewadi, Near IIMS Collage, Marunji RD, Pune, Maharashtra - 411057
                </ADDRESS>
+               <br>
                <a href="tel:+ 91 7822 882868">+ 91 7822 882868</a>
+               <br>
                <a href="mailto:www.architectonicdesign.com">www.architectonicdesign.com</a>
+               <br>
                <ul class="contact-social">
                   <li><a href="#"><img src="img/fb.png" align="Facebook"></a></li>
                   <li><a href="#"><img src="img/tw.png" align="Facebook"></a></li>
                   <li><a href="#"><img src="img/insta.png" align="Facebook"></a></li>
                 </ul>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-7" style="padding:0;">
                <div class="map">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60493.82010738089!2d73.67067025380715!3d18.62519681098867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ba59450b3125%3A0x92ed900afa8ccd06!2sNerhe%2C+Maharashtra!5e0!3m2!1sen!2sin!4v1563298509797!5m2!1sen!2sin" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  <img width="100%" src="img/contact-image.jpg">
                </div>
             </div>
          </div>
@@ -404,6 +410,7 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/classie.js"></script>
+    <script src="js/jquery.easeScroll.js"></script>
     <script>
     var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
       showRight = document.getElementById( 'showRight' ),
@@ -423,6 +430,21 @@
       });
       
         $("#popup_close").click(function(){
+      $(".cbp-spmenu").removeClass("cbp-spmenu-open");
+      $(".overlay_modal").removeClass("c-mask-active");
+      
+      });
+      $("#contact_close").click(function(){
+      $(".cbp-spmenu").removeClass("cbp-spmenu-open");
+      $(".overlay_modal").removeClass("c-mask-active");
+      
+      });
+      $("#project_close").click(function(){
+      $(".cbp-spmenu").removeClass("cbp-spmenu-open");
+      $(".overlay_modal").removeClass("c-mask-active");
+      
+      });
+      $("#about_close").click(function(){
       $(".cbp-spmenu").removeClass("cbp-spmenu-open");
       $(".overlay_modal").removeClass("c-mask-active");
       
@@ -471,6 +493,10 @@
           margin:30,
           nav:false,
           dots:false,
+          autoplay:4000,
+          smartSpeed: 1000,
+          autoplayTimeout:4000,
+          autoplayHoverPause:true,
           responsive:{
               0:{
                   items:1
