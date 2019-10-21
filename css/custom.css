@@ -21,18 +21,18 @@
 	font-weight: 400;
 	font-style: normal
 }
-
-body{font-family: cormorantgaramond, serif;font-size: 14px;overflow-x: hidden;}
-
+html {scroll-behavior: smooth;}
+body{font-family: cormorantgaramond, serif;font-size: 16px;overflow-x: hidden;}
+.section-width-margin {width: 85%;margin-left :15%;}
 /*=== banner ===*/
 .fixed-logo {position: fixed;left:calc(85px - 22px);top:50px;z-index: 9;}
 .fixed-logo img{max-width:66px;}
 .banner-section{background-color:#131217;}
 .banner-contect {display: inline-block;position: absolute;top:300px;left:60px;}
-.banner-contect h1{color: #FFF;text-align: left;font-size: 46px;}
+.banner-contect h1{color: #FFF;text-align: left;font-size: 48px;}
 .banner-carousel {max-width:550px;margin: auto;padding:50px 0 80px;}
 .banner-carousel img{max-width: 100%;}
-.banner-section .carousel-indicators{bottom:-50px;}
+.banner-section .carousel-indicators{bottom:-80px;}
 .banner-section .container{position: relative;}
 /*=== menu===*/
 .cbp-spmenu-vertical .close_event a{border:none;}
@@ -49,17 +49,17 @@ body{font-family: cormorantgaramond, serif;font-size: 14px;overflow-x: hidden;}
 .about-sction .container{position:relative;}
 .about-heading {display: inline-block;vertical-align: middle;width: 50%;}
 .about-heading h2 {color:#ed1c24;text-align: left;font-size:60px;font-family: prata;display: block;margin: 0;}
-.about-dec{display: inline-block;width: 49%;vertical-align: middle;line-height:31px;font-size: 16px;color:#9c9c9f;}
-.about-dec p {font-size: 18px;line-height: 1.95;color: #525258;}
+.about-dec{display: inline-block;width: 49%;vertical-align: middle;line-height:31px;font-size: 18px;color:#6A6A6A;}
+.about-dec p {font-size: 20px;line-height: 2;color: #6A6A6A;}
 .about-img {float: right;margin-top: 50px;}
-.since{font-family: ptsans;font-size: 13px;color:#ed1c24;display: block;text-align: left;letter-spacing: 1px;}
+.since{font-family: ptsans;font-size: 16px;color:#ed1c24;display: block;text-align: left;letter-spacing: 1px;font-weight: bold;}
 
 /*=== about section 1===*/
 .about-sction.one{padding-bottom: 30px;}
 
 /*=== about section 2===*/
 .about-sction.two{padding-bottom: 30px;background-color: #FFF;}
-.about-heading strong {font-size:14px;display: inline-block;color: #6a6a6a;font-family: ptsans;font-weight: 400;line-height: 18px;text-transform: uppercase;letter-spacing: 2px;position: relative;}
+.about-heading strong {font-size:18px;display: inline-block;color: #6a6a6a;font-family: ptsans;font-weight: 400;line-height: 18px;text-transform: uppercase;letter-spacing: 2px;position: relative;}
 .about-heading strong:after {width: 40px;height: 1px;background-color:#ed1c24;content: "";position: absolute;bottom: -6px;right: 0;}
 
 /*=== about section 3===*/
@@ -68,13 +68,13 @@ body{font-family: cormorantgaramond, serif;font-size: 14px;overflow-x: hidden;}
 /*=== main service ===*/
 .main-service{background-color:#131217;padding:100px 0;}
 .main-service-inner {max-width: 750px;}
-.main-service h2{color:#ed1c24;text-align: left;font-size:50px;letter-spacing:1px;}
-.main-service strong {font-size: 18px;color: #9c9c9f;letter-spacing: 2px;line-height: 35px;font-weight:normal;}
+.main-service h2{color:#ed1c24;text-align: left;font-size:52px;letter-spacing:1px;}
+.main-service strong {font-size: 20px;color: #9c9c9f;letter-spacing: 2px;line-height: 35px;font-weight:normal;}
 
 /*=== service ===*/
 .service {background-color: #131316;padding: 45px 0;margin-top: 190px;}
 .service h3{font-size: 22px;margin: 12px 0 11px;color: #fff;}
-.service p{font-size: 15px;margin-bottom: 10px;color: #FFF;line-height:28px;}
+.service p{font-size: 16px;margin-bottom: 10px;color: #FFF;line-height:28px;}
 .service figure {padding: 3px;background-color: #FFF;border-radius: 3px;overflow: hidden;}
 img{max-width: 100%;}
 .service figure img{ transform: scale(1);transition-duration: 0.9s; -moz-transition-duration: 0.9s;-webkit-transition-duration: 0.9s;-ms-transition-duration: 0.9s;}
@@ -92,23 +92,26 @@ img{max-width: 100%;}
 .gallery-section .nav a:hover,.gallery-section .nav .nav-item a.active{background:#FFFFFF;color:#ed1c24}
 .nav .active { background-color:#FFF !important;color:#ed1c24;}
 .gallery-section .nav-pills .nav-link{border-radius:0px;}
+.tab-content { padding:30px 0;}
 @keyframes winanim {0%{opacity:0;transform:scale3d(.3,.3,.3)}50%{opacity:1}}
 
 /*=== get in tuch ===*/
-.get-tuch {padding: 45px 0;}
-.get-tuch h4 {margin-bottom: 21px;font-size:32px;color: #000;margin-top: 30px;}
+.get-tuch {width:85%;margin-left:15%;}
+.get-tuch h4 {margin-bottom: 21px;font-size:32px;color: #000;margin-top: 30px;position: relative;}
+.get-tuch h4:after {width: 40px;height: 1px;background-color: #ed1c24;content: "";position: absolute;bottom: -6px;left:0px;}
 .contact-social{padding: 0;margin: 0;}
 .contact-social li{display: inline-block;vertical-align: top;}
-.get-tuch address{font-family: ptsans;color:#131316;font-size: 17px;max-width: 270px;}
-.get-tuch a{font-family: ptsans;color:#131316;font-size: 19px;max-width: 270px;display: block;}
+.get-tuch address{font-family: ptsans;color:#131316;font-size: 18px;max-width: 270px;position: relative;}
+.get-tuch address:after {width: 40px;height: 1px;background-color: #ed1c24;content: "";position: absolute;bottom: -6px;left:0px;}
+.get-tuch a{font-family: ptsans;color:#131316;font-size: 20px;max-width: 270px;display: block;}
 
 /*=== service overview ===*/
-.service-overview{padding:45px 0;max-width:1100px;margin:auto;}
+.service-overview{padding:45px 0;margin:auto;}
 .service-overview .owl-carousel .owl-stage-outer{padding: 50px 0}
 .service-overview h2{font-size:30px;color: #000;text-align: center;margin-bottom: 35px;}
-.service-overview h3{font-size:19px;text-align: center;margin:20px 0 10px;font-weight: 600;}
+.service-overview h3{font-size:20px;text-align: center;margin:20px 0 10px;font-weight: 600;}
 .service-overview figure {display: block;margin: auto;text-align: center;width: 120px;height: 120px;border: 1px solid #DDD;border-radius: 50%;line-height: 120px;}
-.service-overview p {text-align: justify;font-size: 15px;line-height: 30px;}
+.service-overview p {text-align: justify;font-size: 16px;line-height: 30px;}
 .service-overview .item{padding: 15px 20px;-webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.11);-moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.11);box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.11);transform: scale(1);transition-duration: 0.9s; -moz-transition-duration: 0.9s;-webkit-transition-duration: 0.9s;-ms-transition-duration: 0.9s;}
 .service-overview .owl-carousel .owl-item img{width: auto;display: inline-block;}
 .service-overview .item:hover{ transform: scale(1.1);-moz-transform: scale(1.1);-ms-transform: scale(1.1);-webkit-transform: scale(1.1);transition-duration: 0.9s; -moz-transition-duration: 0.9s;-webkit-transition-duration: 0.9s;-ms-transition-duration: 0.9s;}
@@ -117,22 +120,25 @@ img{max-width: 100%;}
 .team-section{background-color: #131316;padding: 45px 0 0;position: relative;overflow: hidden;}
 .team-section figure{margin: 0;}
 .team-section .middile-img{text-align: center;}
-.team-section .left-content{display: inline-block;vertical-align: middle;position: absolute;top: 0;bottom: 0;margin:auto;height: 117px;z-index: 9;}
-.team-section h3 {font-size: 21px;text-align: left;margin: 20px 0 10px;font-weight: 600;color: #FFF;text-transform: capitalize;}
-.team-section span {font-size: 12px;display: block;color: #6a6a6a;font-family: ptsans;font-weight: 400;line-height: 24px;text-transform: uppercase;max-width: 330px;letter-spacing:3px;}
+.team-section .left-content{display: inline-block;padding-top: 220px;position: absolute;top:0;margin:auto;height: 117px;z-index: 9;}
+.team-section h3 {font-size: 22px;text-align: left;margin: 20px 0 10px;font-weight: 600;color: #FFF;text-transform: capitalize;}
+.team-section span {font-size: 14px;display: block;color: #6a6a6a;font-family: ptsans;font-weight: 400;line-height: 24px;text-transform: uppercase;max-width: 330px;letter-spacing:3px;}
+.team-section p{font-size: 14px;display: block;color:#6a6a6a;font-family: ptsans;font-weight: 400;line-height: 24px;text-transform: uppercase;max-width: 330px;letter-spacing:3px;}
 
 /*===footer ===*/
 footer{padding:10px 0;text-align: center;background-color:#131316;}
-footer p {color: #FFF;font-size: 12px;margin: 0;padding: 5px 0;font-family: ptsans;}
+footer p {color: #FFF;font-size: 14px;margin: 0;padding: 5px 0;font-family: ptsans;}
 
 /*===splah ===*/
 .splash-panel:after{position: absolute;left: 0;right: 0;bottom: 0;top: 0;background-color: rgba(255,255,255,0.8);content: ""}
 .splash-panel{padding: 25px 0 100px;text-align: center;height: 100vh;background-image: url(../img/bg-splash.jpg);background-repeat: no-repeat;background-size: cover;position: relative;display: table;width: 100%;}
 .splash-inner {display: table-cell;vertical-align: middle;position: relative;z-index: 9;}
 .splash-panel figure{margin: 60px 0 13px;}
-.splash-panel figure img{max-width: 100px;}
-.splash-panel span {color: #9c9c9f;font-weight: 300;text-transform: capitalize;font-size:15px;letter-spacing: 3px;margin: 47px 0 60px;}
+.splash-panel span {color: #9c9c9f;font-weight: bold;text-transform: capitalize;font-size:16px;letter-spacing: 3px;margin: 47px 0 60px;}
 .splash-panel h3 {color: #9c9c9f;font-weight: 300;text-transform: capitalize;font-size:30px;letter-spacing: 3px;margin: 47px 0 60px;text-transform: uppercase;}
+.splash-panel h3 {letter-spacing:2px;-webkit-animation: myanim 2s;animation: myanim 2s;}
+@-webkit-keyframes myanim {0%   { letter-spacing: 8px; transform: scale(2); } 100% { letter-spacing:2px;transform: scale(1); }}
+@keyframes myanim {0%   { letter-spacing: 8px; transform: scale(2); } 100% { letter-spacing:2px;transform: scale(1); }}
 .splash-panel a img{position: absolute;left: 0;}
 .splash-panel a{display: block;position: fixed;bottom:25px;z-index: 99;width: 73px;height: 64px;left: 0;right: 0;margin: auto;transition:all 0.9s ease 0s; -moz-transition:all 0.9s ease 0s; -ms-transition:all 0.9s ease 0s; -o-transition:all 0.9s ease 0s; -webkit-transition:all 0.9s ease 0s;}
 .splash-panel a .normal{opacity: 1;}
@@ -155,7 +161,7 @@ footer p {color: #FFF;font-size: 12px;margin: 0;padding: 5px 0;font-family: ptsa
 	.about-heading,.about-dec{width: 100%;display: block;}
 	.main-service{padding: 20px 0;}
 	.main-service h2{font-size: 30px;}
-	.main-service strong{font-size: 15px;line-height: 31px;}
+	.main-service strong{font-size: 16px;line-height: 31px;}
 	.about-sction{padding: 38px 0 0;}
 	.about-heading h2{font-size:30px;}
 	.gallery-section .nav{display: block;margin-top:25px;}
