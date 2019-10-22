@@ -125,9 +125,9 @@
 
 .cbp-spmenu,
 .cbp-spmenu-push {
-	-webkit-transition: all 0.7s ease;
-	-moz-transition: all 0.7s ease;
-	transition: all 0.7s ease;
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;
 }
 
 /* Example media queries */

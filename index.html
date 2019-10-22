@@ -32,9 +32,13 @@
             </div>
         </div>
         <figure>
-            <img src="img/logo.png" alt="logo">
+            <img width="90px" src="img/logo.png" alt="logo" style="float:left;margin-left:50px;">
         </figure>
-        <a id="project_close" href="#project">Projects</a> <a id="about_close" href="#about">About us</a> <a id="contact_close" href="#contact">Contact us</a> 
+        <div style="width: 40%;margin:350px auto;">
+          <a class="scroll" style="display:inlne;margin:0;float:left;" id="project_close" href="#project">Projects</a> 
+          <a class="scroll" style="display:inlne;margin:0;float:left;" id="about_close" href="#about">About us</a> 
+          <a class="scroll" style="display:inlne;margin:0;float:left;" id="contact_close" href="#contact">Contact us</a> 
+        </div>
       </nav>
       <div class="overlay_modal"></div>
       <ul class="fixed-social">
@@ -405,12 +409,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/classie.js"></script>
-    <script src="js/jquery.easeScroll.js"></script>
+    <script src="js/jquery.ease-in-outScroll.js"></script>
     <script>
     var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
       showRight = document.getElementById( 'showRight' ),
@@ -511,5 +515,36 @@
       })
       </script>
       <script> function resizeequalheight(){ equalHeight($(".item")); } function equalHeight(group) { tallest = 0; group.height(''); group.each(function() { thisHeight = $(this).height(); if(thisHeight > tallest) { tallest = thisHeight; } }); group.height(tallest); } $(function(){ $(window).resize(function() { setTimeout('resizeequalheight()',250) }); setTimeout('resizeequalheight()',250) }); </script>
+      <script>
+        $(document).ready(function() {
+
+        var scrollLink = $('.scroll');
+
+        // Smooth scrolling
+        scrollLink.click(function(e) {
+          e.preventDefault();
+          $('body,html').animate({
+            scrollTop: $(this.hash).offset().top
+          }, 1000 );
+        });
+
+        // Active link switching
+        $(window).scroll(function() {
+          var scrollbarLocation = $(this).scrollTop();
+          
+          scrollLink.each(function() {
+            
+            var sectionOffset = $(this.hash).offset().top - 20;
+            
+            if ( sectionOffset <= scrollbarLocation ) {
+              $(this).parent().addClass('active');
+              $(this).parent().siblings().removeClass('active');
+            }
+          })
+          
+        })
+
+        })
+      </script>
   </body>
 </html>
