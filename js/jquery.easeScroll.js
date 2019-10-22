@@ -1,4 +1,4 @@
-$.fn.easeScroll = function(options) {
+$.fn.ease-in-outScroll = function(options) {
     ! function() {
         function e() {
             var e = !1;
