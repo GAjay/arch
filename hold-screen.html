@@ -23,7 +23,7 @@
       <span class="fadeInUp animated wow">infrastructure design and management </span>
       <h3>interior design services company</h3>
       </div>
-      <a onclick="location.href = 'index.html';" style="text-decoration: none;">
+      <a href="index.html" style="text-decoration: none;">
             <svg class="normal" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" class="svg" preserveAspectRatio="xMidYMid" width="82" height="82" viewBox="0 0 82 82" version="1.1" id="svg4" sodipodi:docname="svg.svg" inkscape:version="0.92.3 (2405546, 2018-03-11)">
                 <metadata id="metadata10">
                   <rdf:RDF>
@@ -146,5 +146,11 @@
       })
       </script>
       <script> function resizeequalheight(){ equalHeight($(".item")); } function equalHeight(group) { tallest = 0; group.height(''); group.each(function() { thisHeight = $(this).height(); if(thisHeight > tallest) { tallest = thisHeight; } }); group.height(tallest); } $(function(){ $(window).resize(function() { setTimeout('resizeequalheight()',250) }); setTimeout('resizeequalheight()',250) }); </script>
+      <script>
+        $('a[href*=\\#]').on('click', function(event){     
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+});
+      </script>
   </body>
 </html>
