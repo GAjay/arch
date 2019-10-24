@@ -10,7 +10,7 @@
     <link href="css/css_animate.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/component.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">   
@@ -54,12 +54,12 @@
       </ul>
     </header>
     <div class="banner-section">
-      <div class="container section-width-margin">
+      <div class="container">
         <!-- <div class="banner-contect">
           <h1>Innovation<br>Design</h1>
         </div> -->
         <div class="banner-carousel">
-          <div id="carouselExampleIndicators" class="carousel slide"  data-ride="carousel" data-interval="3000">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -421,7 +421,6 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/classie.js"></script>
-    <script src="js/jquery.ease-in-outScroll.js"></script>
     <script>
     var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
       showRight = document.getElementById( 'showRight' ),
@@ -467,61 +466,7 @@
       });
       });
   </script> 
-  <script src="js/jquery.isotope.min.js"></script>
-  <script>
-         $(window).load(function(){
-             var $container = $('.portfolioContainer');
-             $container.isotope({
-                 filter: '*',
-                 animationOptions: {
-                     duration: 750,
-                     easing: 'linear',
-                     queue: false
-                 }
-             });
-          
-             $('.portfolioFilter a').click(function(){
-                 $('.portfolioFilter .current').removeClass('current');
-                 $(this).addClass('current');
-          
-                 var selector = $(this).attr('data-filter');
-                 $container.isotope({
-                     filter: selector,
-                     animationOptions: {
-                         duration: 750,
-                         easing: 'linear',
-                         queue: false
-                     }
-                  });
-                  return false;
-             }); 
-         });
-      </script>
-      <script src="js/owl.carousel.min.js"></script>
-      <script>
-        $('.owl-carousel').owlCarousel({
-          loop:true,
-          margin:30,
-          nav:false,
-          dots:false,
-          autoplay:4000,
-          smartSpeed: 1000,
-          autoplayTimeout:4000,
-          autoplayHoverPause:true,
-          responsive:{
-              0:{
-                  items:1
-              },
-              480:{
-                  items:2
-              },
-              769:{
-                  items:3
-              }
-          }
-      })
-      </script>
-      <script> function resizeequalheight(){ equalHeight($(".item")); } function equalHeight(group) { tallest = 0; group.height(''); group.each(function() { thisHeight = $(this).height(); if(thisHeight > tallest) { tallest = thisHeight; } }); group.height(tallest); } $(function(){ $(window).resize(function() { setTimeout('resizeequalheight()',250) }); setTimeout('resizeequalheight()',250) }); </script>
+
       <script>
       document.addEventListener("DOMContentLoaded", function() {
       var scrollLinks = document.querySelectorAll('[href^="#"]');
@@ -556,5 +501,30 @@
         }
       });
       </script>
-  </body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <script>
+        $('.owl-carousel').owlCarousel({
+          loop:true,
+          margin:30,
+          nav:false,
+          dots:false,
+          autoplay:4000,
+          smartSpeed: 1000,
+          autoplayTimeout:4000,
+          autoplayHoverPause:true,
+          responsive:{
+              0:{
+                  items:1
+              },
+              480:{
+                  items:2
+              },
+              769:{
+                  items:3
+              }
+          }
+      })
+      </script>
+      <script> function resizeequalheight(){ equalHeight($(".item")); } function equalHeight(group) { tallest = 0; group.height(''); group.each(function() { thisHeight = $(this).height(); if(thisHeight > tallest) { tallest = thisHeight; } }); group.height(tallest); } $(function(){ $(window).resize(function() { setTimeout('resizeequalheight()',250) }); setTimeout('resizeequalheight()',250) }); </script>
+ 
 </html>

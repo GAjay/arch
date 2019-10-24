@@ -2927,7 +2927,7 @@
       var _this = this;
 
       if ($(this.element).css('display') === 'none') {
-        throw new Error('Please-in-out use show on visible elements');
+        throw new Error('Please use show on visible elements');
       }
 
       var showEvent = $.Event(this.constructor.Event.SHOW);
