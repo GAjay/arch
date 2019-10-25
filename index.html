@@ -10,7 +10,7 @@
     <link href="css/css_animate.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/component.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">   
@@ -34,26 +34,32 @@
         <figure>
             <img width="90px" src="img/logo.png" alt="logo" style="float:left;margin-left:50px;">
         </figure>
-        <div style="width: 40%;margin:350px auto;">
-          <a class="scroll" style="display:inlne;margin:0;float:left;" id="project_close" href="#project">Projects</a> 
-          <a class="scroll" style="display:inlne;margin:0;float:left;" id="about_close" href="#about">About us</a> 
-          <a class="scroll" style="display:inlne;margin:0;float:left;" id="contact_close" href="#contact">Contact us</a> 
+        <div class="row container overlay_list" style="margin:22% auto;text-align: center;">
+          <div class="col-md-4">
+            <a id="project_close" href="#project">Projects</a> 
+          </div>
+          <div class="col-md-4">
+            <a id="about_close" href="#about">About us</a>
+          </div>
+          <div class="col-md-4"> 
+            <a id="contact_close" href="#contact">Contact us</a> 
+          </div>
         </div>
       </nav>
       <div class="overlay_modal"></div>
       <ul class="fixed-social">
-        <li><a href="#"><img src="img/fb.png" align="Facebook"></a></li>
-        <li><a href="#"><img src="img/tw.png" align="Facebook"></a></li>
-        <li><a href="#"><img src="img/insta.png" align="Facebook"></a></li>
+        <li><a href="javascript:void(0)"><img src="img/fb.png" align="Facebook"></a></li>
+        <li><a href="javascript:void(0)"><img src="img/tw.png" align="Facebook"></a></li>
+        <li><a href="javascript:void(0)"><img src="img/insta.png" align="Facebook"></a></li>
       </ul>
     </header>
     <div class="banner-section">
-      <div class="container section-width-margin">
+      <div class="container">
         <!-- <div class="banner-contect">
           <h1>Innovation<br>Design</h1>
         </div> -->
         <div class="banner-carousel">
-          <div id="carouselExampleIndicators" class="carousel slide"  data-ride="carousel" data-interval="3000">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -409,12 +415,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <script src="js/jquery.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/classie.js"></script>
-    <script src="js/jquery.ease-in-outScroll.js"></script>
     <script>
     var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
       showRight = document.getElementById( 'showRight' ),
@@ -460,37 +466,42 @@
       });
       });
   </script> 
-  <script src="js/jquery.isotope.min.js"></script>
-  <script>
-         $(window).load(function(){
-             var $container = $('.portfolioContainer');
-             $container.isotope({
-                 filter: '*',
-                 animationOptions: {
-                     duration: 750,
-                     easing: 'linear',
-                     queue: false
-                 }
-             });
-          
-             $('.portfolioFilter a').click(function(){
-                 $('.portfolioFilter .current').removeClass('current');
-                 $(this).addClass('current');
-          
-                 var selector = $(this).attr('data-filter');
-                 $container.isotope({
-                     filter: selector,
-                     animationOptions: {
-                         duration: 750,
-                         easing: 'linear',
-                         queue: false
-                     }
-                  });
-                  return false;
-             }); 
-         });
+
+      <script>
+      document.addEventListener("DOMContentLoaded", function() {
+      var scrollLinks = document.querySelectorAll('[href^="#"]');
+      for (var i = 0; i < scrollLinks.length; i++) {
+        scrollLinks[i].addEventListener("click", scrollHandler);
+      }
+
+        function scrollHandler(event) {
+          event.preventDefault();
+
+          var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+          var targetElementId = this.getAttribute("href").split("#")[1];
+          var goToPosition = document.getElementById(targetElementId).offsetTop;
+          var distance = goToPosition - currentPosition;
+
+          var totalStep = 40;
+          var currentStep = 0;
+          var intervalTime = 10;
+
+          var scrollby = distance / totalStep;
+
+          var isScrollElementBody = document.scrollingElement && document.scrollingElement.tagName == "BODY";
+
+          var interval = setInterval(function() {
+            if (currentStep < totalStep) {
+              isScrollElementBody ? (document.body.scrollTop += scrollby) : (document.documentElement.scrollTop += scrollby);
+              currentStep++;
+            } else {
+              clearInterval(interval);
+            }
+          }, intervalTime);
+        }
+      });
       </script>
-      <script src="js/owl.carousel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
       <script>
         $('.owl-carousel').owlCarousel({
           loop:true,
@@ -515,36 +526,5 @@
       })
       </script>
       <script> function resizeequalheight(){ equalHeight($(".item")); } function equalHeight(group) { tallest = 0; group.height(''); group.each(function() { thisHeight = $(this).height(); if(thisHeight > tallest) { tallest = thisHeight; } }); group.height(tallest); } $(function(){ $(window).resize(function() { setTimeout('resizeequalheight()',250) }); setTimeout('resizeequalheight()',250) }); </script>
-      <script>
-        $(document).ready(function() {
-
-        var scrollLink = $('.scroll');
-
-        // Smooth scrolling
-        scrollLink.click(function(e) {
-          e.preventDefault();
-          $('body,html').animate({
-            scrollTop: $(this.hash).offset().top
-          }, 1000 );
-        });
-
-        // Active link switching
-        $(window).scroll(function() {
-          var scrollbarLocation = $(this).scrollTop();
-          
-          scrollLink.each(function() {
-            
-            var sectionOffset = $(this.hash).offset().top - 20;
-            
-            if ( sectionOffset <= scrollbarLocation ) {
-              $(this).parent().addClass('active');
-              $(this).parent().siblings().removeClass('active');
-            }
-          })
-          
-        })
-
-        })
-      </script>
-  </body>
+ 
 </html>

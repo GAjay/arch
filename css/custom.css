@@ -29,8 +29,8 @@ body{font-family: cormorantgaramond, serif;font-size: 16px;overflow-x: hidden;}
 .banner-section{background-color:#131217;}
 .banner-contect {display: inline-block;position: absolute;top:300px;left:60px;}
 .banner-contect h1{color: #FFF;text-align: left;font-size: 48px;}
-.banner-carousel {max-width:550px;margin: auto;padding:50px 0 80px;}
-.banner-carousel img{max-width: 100%;}
+.banner-carousel {max-width:550px;margin: auto;padding:50px 0 80px;transition:all 0.3s ease;}
+.banner-carousel img{max-width: 100%;transition: all 0.3s ease}
 .banner-section .carousel-indicators{bottom:-80px;}
 .banner-section .container{position: relative;}
 /*=== menu===*/
@@ -39,8 +39,9 @@ body{font-family: cormorantgaramond, serif;font-size: 16px;overflow-x: hidden;}
 #cbp-spmenu-s2 > #top_headpopup {position: absolute;right: 0;top: 28px;}
 .side-menu {position: fixed;left:calc(85px - -1px);top: 0;bottom: 0;margin: auto;height: 19px;z-index: 99;}
 .side-menu a{ cursor:pointer;}
-.overlay_menu_list {width:100%;}
-.overlay_menu_list li {display:inline;}
+.overlay_list {font-family:ptsans;}
+.overlay_list .col-md-4 a {font-size: 16px;font-weight: 100;}
+.overlay_list .col-md-4 a:hover  {color:red;}
 /*=== social ===*/
 .fixed-social{padding: 0;margin: 0;position: fixed;bottom:50px;left:calc(85px - 13px);z-index: 99;}
 .fixed-social li{display:inline-block;vertical-align: top;margin:0 2px;}
@@ -157,6 +158,7 @@ footer p {color: #FFF;font-size: 14px;margin: 0;padding: 5px 0;font-family: ptsa
 	.fixed-social{left: calc(85px - 63px);}
 	.about-img{max-width: 600px;}
 	.about-heading{padding-left: 60px;}
+	.overlay_list{margin:40% auto;}
 }
 @media (max-width:767px){
 	.about-heading,.about-dec{width: 100%;display: block;}
@@ -175,5 +177,8 @@ footer p {color: #FFF;font-size: 14px;margin: 0;padding: 5px 0;font-family: ptsa
 	.fixed-social{display: none;}
 	.side-menu{bottom: auto;left: auto;right:19px;top:22px;position: absolute;}
 	.fixed-logo{top:17px;left:16px;position: absolute;}
+	.overlay_list .col-md-4 a{margin:20px auto;}
+	.section-width-margin{margin:0;width: 100%;}
+	.get-tuch{width: 100%;margin:0;}
 	header{background-color: #FFF;height: 67px;-webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.11);-moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.11);box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.11);position: relative;}
 }
